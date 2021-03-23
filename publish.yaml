@@ -1,0 +1,529 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Event service
+  contact:
+    name: Ilya Zabolotnev
+    email: izabolotnev@ozon.ru
+basePath: /
+schemes:
+  - http
+paths:
+  /admin-portal:
+    post:
+      summary: Endpoint for Admin portal
+      description: ''
+      operationId: adminPortal
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /back-office:
+    post:
+      summary: Endpoint for BackOffice
+      description: ''
+      operationId: backOffice
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /goodzon:
+    post:
+      summary: Endpoint for Goodzon
+      description: ''
+      operationId: goodzon
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /marketplace:
+    post:
+      summary: Endpoint for Marketplace
+      description: ''
+      operationId: marketplace
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /metazon:
+    post:
+      summary: Endpoint for Metazon
+      description: ''
+      operationId: metazon
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /middleware:
+    post:
+      summary: Endpoint for Middleware
+      description: ''
+      operationId: middleware
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /order-api:
+    post:
+      summary: Endpoint for Order Api
+      description: ''
+      operationId: orderApi
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /order-service:
+    post:
+      summary: Endpoint for Order Service
+      description: ''
+      operationId: orderService
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /price:
+    post:
+      summary: Endpoint for Price
+      description: ''
+      operationId: price
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /procontent:
+    post:
+      summary: Endpoint for Procontent
+      description: ''
+      operationId: procontent
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /returns:
+    post:
+      summary: Endpoint for Returns
+      description: ''
+      operationId: returns
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /rezon:
+    post:
+      summary: Endpoint for Rezon
+      description: ''
+      operationId: rezon
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /supplier-portal:
+    post:
+      summary: Endpoint for Supplier Portal
+      description: ''
+      operationId: supplierPortal
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /warehouse:
+    post:
+      summary: Endpoint for WMS
+      description: ''
+      operationId: warehouse
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+  /zendesk:
+    post:
+      summary: Endpoint for Zendesk
+      description: ''
+      operationId: zendesk
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: EventRequestObject
+          description: Array of objects with information about event. Also you can add any parameters to the "*data*" property
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EventRequest'
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/SuccessResponse'
+        '400':
+          description: Validation error
+          schema:
+            $ref: '#/definitions/FailResponse'
+        '500':
+          description: Internal error
+          schema:
+            $ref: '#/definitions/FailResponse'
+definitions:
+  ErrorData:
+    type: object
+    properties:
+      id:
+        type: string
+        example: 39aed100bd7fc362754e9ea7d031402c
+      error:
+        type: string
+        example: Something gone wrong
+      code:
+        type: integer
+        format: int32
+        example: 500
+  EventRequest:
+    type: object
+    required:
+      - object_type
+    properties:
+      object_type:
+        type: string
+        example: someObject
+      id:
+        type: string
+        example: '314159265'
+      updated_at:
+        type: string
+        example: '2018-05-28T23:00:00Z'
+      event:
+        type: string
+        example: statusChange
+      data:
+        type: object
+        additionalProperties:
+          type: object
+  FailResponse:
+    type: object
+    properties:
+      result:
+        type: string
+        enum:
+          - fail
+      errors:
+        type: array
+        items:
+          $ref: '#/definitions/ErrorData'
+  SuccessResponse:
+    type: object
+    properties:
+      result:
+        type: string
+        enum:
+          - success
